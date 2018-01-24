@@ -1,0 +1,23 @@
+package ${package_name}.web;
+
+import ${package_name}.entity.${model};
+import ${package_name}.service.${model}Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+* 控制层：${model}Controller
+* Created by XJH on ${ctime}.
+*/
+@RestController
+@RequestMapping("/${mapper}")
+public class ${model}Controller {
+
+    private final ${model}Service ${mapper}Service;
+
+    @Autowired
+    public ${model}Controller(${model}Service ${mapper}Service) {
+        this.${mapper}Service = ${mapper}Service;
+    }
+}
