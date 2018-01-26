@@ -1,7 +1,7 @@
 package ${package_name}.service.impl;
 
-import ${package_name}.annotation.BaseService;
-import ${package_name}.base.impl.BaseServiceImpl;
+import ${package_name}.generator.base.BaseMapper;
+import ${package_name}.generator.base.impl.BaseServiceImpl;
 import ${package_name}.service.${model}Service;
 import ${package_name}.mapper.${model}Mapper;
 import ${package_name}.entity.${model};
@@ -15,8 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 */
 @Service
 @Transactional
-@BaseService
-public class ${model}ServiceImpl extends BaseServiceImpl<${model}Mapper, ${model}> implements ${model}Service {
+public class ${model}ServiceImpl extends BaseServiceImpl<${model}> implements ${model}Service {
 
     private final ${model}Mapper ${mapper}Mapper;
 
@@ -24,5 +23,8 @@ public class ${model}ServiceImpl extends BaseServiceImpl<${model}Mapper, ${model
     public ${model}ServiceImpl(${model}Mapper ${mapper}Mapper) {
         this.${mapper}Mapper = ${mapper}Mapper;
     }
+
+    @Override
+    public BaseMapper<${model}> baseMapper() { return ${mapper}Mapper; }
 
 }

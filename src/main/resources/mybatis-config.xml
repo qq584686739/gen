@@ -5,6 +5,10 @@
 <configuration>
 
     <settings>
+
+        <!-- 开启二级缓存，默认是false -->
+        <setting name="cacheEnabled" value="true"/>
+
         <setting name="defaultStatementTimeout" value="3000"/>
         <!--使用列别名替换别名 默认true -->
         <setting name="useColumnLabel" value="true"/>
