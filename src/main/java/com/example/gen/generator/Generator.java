@@ -1,5 +1,6 @@
 package com.example.gen.generator;
 
+
 import com.example.gen.generator.utils.MybatisGeneratorUtil;
 import com.example.gen.generator.utils.PropertiesFileUtil;
 
